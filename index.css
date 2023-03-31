@@ -1,0 +1,661 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    user-select: none;
+}
+
+/* global class */
+a{
+    text-decoration: none;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+/* global class end */
+
+/* header */
+header{
+    background: #f0f0f0;
+    padding: 1rem 0;
+    box-shadow: 0 4px 4px 0 #00000040;
+    position: sticky;
+    height: 75px;
+    top: 0;
+    z-index: 99;
+}
+header .navBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}   
+
+/* left nav */
+.navBar .leftNav{
+    margin-right: 20.813rem;
+}   
+.leftNav img{
+    width: 20vw;
+}
+/* left nav end */
+
+/* right nav */
+.navBar .rightNav{
+    display: flex;
+    align-items: center;
+}   
+.rightNav .rightNavIcons{
+    margin: 0 0.5rem 0 0;
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 1rem;
+    line-height: 17px;
+    letter-spacing: 0.02em;
+    color: #fffffc;
+}
+.rightNavIcons::before{
+    /* content: ""; */
+    background-color: #3683f0;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    padding: 6.4px;
+}
+
+.rightNav .userImg{
+    width: 2rem;
+}
+.userImg img{
+    width: inherit;
+    border-radius: 20px;
+}
+/* user hamburger menu */
+.rightNav .userHamburger i:first-child{
+    color: #3683f0;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+.userHamburger{
+    position: relative;
+}
+.userHamburger .userMenu a:first-child span{
+    margin-left: 0;
+    color: #3194ff;
+}
+.userMenu{
+    background-color: #fffffc;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 1;
+    left: -36px;
+    /* width: 12rem; */
+    font-size: 1rem;
+    border: 1px solid rgba(0,0,0,.15);
+    padding: 0.5rem 0;
+    margin: 0.125rem 0 0;
+    min-width: 15rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    display: none;
+    z-index: 99;
+}
+.userMenu a{
+    color: #3194ff;
+    /* background-color: green; */
+    text-align: left;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 0.375rem 2rem;
+    margin: 0.4rem 0;
+    letter-spacing: 1px;
+    line-height: 1.5;    
+    font-size: 1rem;
+    background-color: transparent;
+    /* border: 1px solid transparent;
+    border-radius: 0.25rem; */
+}
+.userMenu a:hover{
+    text-decoration: underline;
+    background-color: rgba(128, 128, 128, 0.274);
+}
+.userMenuShow{
+    display: flex;
+}
+/* user hamburger menu */
+
+/* right nav end */
+/* header end */
+
+/* main section  */
+.mainSection{
+    display: flex;
+    justify-content: center;
+}
+
+/* journey board */
+.mainSection .jourenyBoard{
+    width: 7vw;
+    background-color: white;
+    box-shadow:0px 0px 8px 0px #00000050;
+    height: 100vh;
+    border-top-right-radius: 10px;
+    font-size: 1.04rem;
+    position: fixed;
+    left: 0;
+    z-index: 999;
+}
+.jourenyBoard .journeyBtn{
+    position: relative;
+    display: flex;
+    height:2.7rem;
+    align-items: center;
+    padding: 0.6rem 1rem;
+    background-color: black;
+    color: white;
+    border-top-right-radius: 10px;
+    font-weight: bold;
+}
+.jourenyBoard span{
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    position: absolute;
+    left: 0.625rem;
+    display: none;
+}
+.journeyBtn i{
+    cursor: pointer;
+    position: absolute;
+    right: 0.625rem;
+}
+.jourenyBoard ul{
+    padding:1rem 4rem;
+    display: none;
+}
+.jourenyBoard ul li:first-child{
+    color: #212529;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+}
+.jourenyBoard ul li{
+    color: #474e4f;
+    font-weight: 500;
+    margin: 0.4rem 0;
+}
+.jourenyBoard .number{
+    position: relative;
+    left: 30%;
+    top: 5%;
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: #0029ff;
+    line-height: 2.5;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: white;
+    border: 1px solid #0029ff;
+}
+/* journey board end */
+
+/* technical project managment section */
+.mainSection .projectManagment{
+    width: 70vw;
+    /* background-color: #3194ff; */
+    height: 100vh;
+    /* margin-bottom: 30rem; */
+}
+.projectManagment .heading{
+    width: 466px;
+    height: 42px;
+    font-weight: 900;
+    font-size: 1.75rem;
+    line-height: 42px;
+    letter-spacing: 0.02em;
+    color: #0029ff;
+    margin-top: 0.8rem;
+}
+.projectManagment .submitTaskBtn{
+    background-color: #0029FF;
+    border-radius: 10px;
+    color: white;
+    outline: none;
+    border: none;
+    padding: 0.5rem 0.87rem;
+    font-size: 9.6px;
+    position: fixed;
+    right: 14rem;
+    top: 6rem;
+    z-index: 999;
+}
+.projectManagment .explore{
+    background-color: #e9ecef;
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 5px;
+}
+.explore h3{
+    font-weight: bolder;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    letter-spacing: 0.02em;
+    color: #000000;
+}
+.explore p{
+    margin-top: 0.4rem;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+    color: #000000;
+}
+
+/* iframe video and writing context container */
+.projectManagment .projectManagmentCont{
+
+}
+/* technical project managment Box */
+.projectManagmentCont .projectManagmentBox{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 3rem;
+}
+/* technical project managment Box */
+
+/* project managment div  */
+.projectManagmentBox .projectManagmentDivSame{
+    background: #FDFDFD;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px -4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    width: 34vw;
+    height:68vh;
+    overflow: scroll;
+}
+.projectManagmentDivSame .projectManagmentHeadingSame{
+    background-color: #000000;
+    color: #fffffc;
+    text-align: center;
+    position: relative;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px 15px 0px 0px;
+    /* border-radius: 15px; */
+}
+.projectManagmentHeadingSame .head{
+
+}
+.projectManagmentHeadingSame i{
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+.projectManagmentDivSame .descriptionSame{
+    padding: 2rem;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+    color: #000000;
+}
+.projectManagmentDiv .video{
+    width: inherit;
+    height:40vh ;
+
+}
+.video iframe{
+    height: 100%;
+    width: 100%;
+}
+/* project managment div  end */
+
+/* project managment div 2nd */
+/* editing inside editor */
+.accordion-button::before {
+    flex-shrink: 0;
+    width: var(--bs-accordion-btn-icon-width);
+    height: var(--bs-accordion-btn-icon-width);
+    margin-right: 3rem;
+    content: "";
+    background-image: var(--bs-accordion-btn-icon);
+    background-repeat: no-repeat;
+    background-size: var(--bs-accordion-btn-icon-width);
+    transition: var(--bs-accordion-btn-icon-transition);
+}
+.accordion-button::after{
+    display: none;
+}
+.accordion-item:last-of-type .accordion-button.collapsed {
+    font-weight: bold;
+    background-color: #fdfdf7
+}
+.subThreadMain{
+    display: flex;
+    justify-content: space-around;
+}
+.subThreadMain .subThreadCont{
+    background: rgba(0, 0, 0, 0.05);
+    border: 0.1px solid #333333;
+    box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: none;
+    width: 15rem;
+}
+.subThreadCont .subThread{
+    font-weight: bold;
+    padding: 1rem;
+    font-size: 0.7rem;
+}
+.subThreadCont textarea{
+    border-radius: 1rem;
+    padding: 6px 12px;
+    border: none;
+    outline: none;
+    width: inherit;
+}
+/* icons and select category */
+.accordion-body .iconsCategoryCont{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+.iconsCategoryCont .icons svg{
+    margin: 0 0.3rem;
+    cursor: pointer;
+    fill: #0029FF;
+}
+.iconsCategoryCont .icons svg path:hover{
+    fill: #0029FF;
+}
+.iconsCategoryCont .category{
+    display: flex;
+}
+.category select{
+    width: 100px;
+    font-size: 0.6rem;
+    color: black;
+    font-weight: bold;
+    margin: 0 0.3rem;
+}
+/* icons and select category end */
+
+/* sub thread btn */
+.accordion-body .sdlms-button{
+    background: #0029FF;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #FFFFFF;
+    outline: none;
+    border: none;
+    padding: 8px 13.913px;
+    margin-top: 2rem;
+}
+.sdlms-button svg{
+    margin-right: 0.3rem;
+}
+/* sub thread btn end */
+
+ .subThreadCont{
+    background: rgba(0, 0, 0, 0.05);
+    border: 0.1px solid #333333;
+    box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: none;
+    margin-top: 2rem;
+}
+.subThreadCont .subThread{
+    font-weight: bold;
+    padding: 1rem;
+    font-size: 0.7rem;
+}
+.subThreadCont textarea{
+    border-radius: 1rem;
+    padding: 6px 12px;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+/* thread creadit and select option */
+.threadCredit{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+.threadCredit .selectOption select{
+    width: 100px;
+    font-size: 0.6rem;
+    color: black;
+    font-weight: bold;
+    margin: 0 0.3rem;
+}
+/* thread creadit and select option end */
+
+
+/* project managment div 2nd end */
+
+/* iframe video and writing context container end */
+
+/* structure your Pointers box */
+.projectManagmentDivSame .editor{
+    padding: 1rem;
+}
+.editor .title{
+    font-size: 1rem;
+    font-weight: bolder;
+}
+.editor input{
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.475rem 2.1rem;
+    outline: none;
+    box-shadow: 0 2px 8px 0 #00000026;
+    border: none;
+    /* display: block; */
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.editor .contentBox .content{
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: bolder; 
+}
+.contentBox .contentCont{
+    box-shadow: 0 2px 8px 0 #00000026;
+    border: none;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.contentCont .toolBar{
+    display: flex;
+}
+.toolBar p{
+    cursor: pointer;
+    margin: 0 0.3rem;
+    font-size: 0.875rem;
+    color: black;
+    font-weight: 600;
+    padding: 0.3rem;
+}
+.toolBar p:hover{
+    background-color: #3683f071;
+}
+.contentCont .toolBarFunc{
+    display: flex;
+    align-items: center;
+}
+.toolBarFunc svg{
+    margin: 1rem 1rem;
+}
+.contentBox .contentTextArea{
+    width: 100%;
+    box-shadow: 0 2px 8px 0 #00000026;
+    border: none;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    outline: none;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.editor .choosFile{
+    display: flex;
+}
+.choosFile .form-group select{
+    width: 15rem;
+}
+.choosFile .form-group .input-group .custom-file input{
+    width: 15rem;
+}
+.choosFile .form-group label{
+    font-weight: bold;
+}
+.editor #saveDrafBtn .temp button{
+    background-color: #0029FF;
+    color: white;
+    transition: all 0.3s;
+
+}
+.editor #saveDrafBtn .temp button:hover{
+    color: black;
+    transition: all 0.3s;
+}
+.editor .contentBox .contentCont .toolBarFunc{
+    display: flex;
+    align-items: center;
+}
+.editor .contentBox .contentCont .toolBarFunc svg{
+    display: block;
+    cursor: pointer;
+}
+.toolBarFunc select option{
+    font-weight: bolder;
+}
+.toolBarFunc select option:nth-child(1){
+    font-size: 1rem;
+}
+.toolBarFunc select option:nth-child(2){
+    font-size: 1.5rem;
+}
+.toolBarFunc select option:nth-child(3){
+    font-size:1.375rem;
+}
+.toolBarFunc select option:nth-child(4){
+    font-size:1.25rem;
+}
+.toolBarFunc select option:nth-child(5){
+    font-size: 1.125rem;
+}
+.toolBarFunc select option:nth-child(6){
+    font-size: 1rem;
+}
+.toolBarFunc select option:nth-child(7){
+    font-size: 0.875rem;
+}
+/* structure your Pointers box end */
+
+/* technical project managment section end */
+
+/* Notice Board section */
+.mainSection .noticeBoard{
+    position: fixed;
+    right: 0;
+    width: 4.7vw;
+    height: 100vh;
+    margin-top: 2rem;
+}
+.noticeBoard .noticeBoardCont{
+    display: flex;
+}
+.noticeBoard .noticeBoardCont .noticeBoardDiv{
+    background-color: black;
+    width: 3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding: 0.1rem;
+    height: 21rem;
+    z-index: 99999;
+    /* display: none; */
+}
+.noticeBoardDiv img{
+    width: 25px;
+    padding-top: 10px;
+    cursor: pointer;
+}
+.noticeBoardDiv p{
+    color: white;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    letter-spacing: 2px;
+    margin-top: 2rem;
+    font-weight: bold;
+    font-size: 0.7rem;
+}
+.noticeBoard .emptySpace{
+    height: 20.9rem;
+    background-color: white;
+    border-top-left-radius: 3px;
+    z-index: 2;
+    border-bottom-left-radius: 3px;
+    width: 1.7vw;
+    box-shadow:0px 0px 8px 8px #00000050;
+    /* display: none; */
+}
+
+/* help btn */
+.noticeBoard .helpBtnCont{
+    position: fixed;
+    bottom: 0.3rem;
+    right: 1rem;
+}
+.helpBtnCont svg{
+    width: 4.188rem;
+    background: #0029ff;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.563rem 1.188rem;
+    height: 4.25rem;
+    margin: 1rem 0;
+    border-radius: 96%;
+}
+/* help btn end*/
+
+/* Notice Board section end */
+/* main section end */
